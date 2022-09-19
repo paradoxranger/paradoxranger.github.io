@@ -1,19 +1,104 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <base target="_top">
-      <style>
-        iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-      </style>
-   </head>
-   <body><h1>สวัสดี
-       <iframe src="http://kruthong.com"></iframe>
-   </body>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Charmonman&family=K2D&family=Sriracha&display=swap" rel="stylesheet">
+        <!-- Bootstrap css -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <!-- Aos css -->
+        <link href="https://semisailom.github.io/ggSheetFetchApi/assets/css/aos.css" rel="stylesheet">
+        <!-- Main Script -->
+        <script src="api.js" async defer></script>
+
+    </head>
+    <body>
+
+        <h1 class="site-title">Air Jordan Store - Fetch Products from Google Sheet </h1>
+        <div class="products-grid"></div>
+
+        <!-- Aos js -->
+        <script src="https://semisailom.github.io/ggSheetFetchApi/assets/js/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    </body>
+
+    <footer>
+        <p>Powered by Wichy</p>
+        <p>&copy; 2022 - Air Jordan Store</p>
+    </footer>
 </html>
+styles.css
+p {
+    margin-bottom: 5px !important;
+}
+
+h1.site-title {
+    text-align: center;
+    font-family: 'Sriracha', sans-serif;
+    font-weight: 500;
+    padding-top: 1.75rem;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 75px;
+}
+
+.product-brand {
+    font-family: 'K2D', sans-serif;
+    font-weight: 500;
+    font-size: 1.15rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.product-text {
+    font-family: 'K2D', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: rgb(90, 90, 90);
+}
+
+img.product-img {
+    max-width: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+    transform: scale(0.9);
+}
+
+img.product-img:hover {
+    transform: scale(0.95);
+}
+
+button.btn-outline-dark {
+    font-family: 'K2D', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 400;
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
+
+footer { 
+    font-family: 'K2D', sans-serif;
+    font-weight: 600;
+    font-size: 1.15rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 75px;
+    border: solid 1px #000000;
+    border-width: 1px 0;
+
+}
